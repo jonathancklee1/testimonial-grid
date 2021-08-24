@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.grid-container {
+  margin: 3em auto;
+  display: grid;
+  width: 90%;
+  grid-gap: 2em;
+}
+
+.grid-item {
+  color: white;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.profile p {
+  position: relative;
+  margin-left: 4em;
+}
+
+.profile img {
+  position: absolute;
+  float: left;
+  border-radius: 50%;
+  width: 35px;
+}
+
+.testimony {
+  margin: 1em auto;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.quote,
+.title {
+  color: hsl(0, 0%, 70%);
+}
+
+/* Specific Grid item attributes */
+.item1 {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 0;
+}
+.item2 {
+  background-color: hsl(217, 19%, 35%);
+}
+.item3 {
+  color: black;
+  background-color: white;
+}
+.item4 {
+  background-color: hsl(219, 29%, 14%);
+}
+.item5 {
+  color: black;
+  background-color: white;
+}
+.item3 .quote {
+  color: hsl(219, 29%, 14%);
+}
+.item5 .quote {
+  color: hsl(219, 29%, 14%);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Query - Create Grid Layout */
+
+@media (min-width: 940px) {
+  .grid-container {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+      "item1 item1 item2 item5"
+      "item3 item4 item4 item5";
+    max-width: 1100px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .item1 {
+    grid-area: item1;
+  }
+  .item2 {
+    grid-area: item2;
+  }
+  .item3 {
+    grid-area: item3;
+  }
+  .item4 {
+    grid-area: item4;
+  }
+  .item5 {
+    grid-area: item5;
+  }
+}
