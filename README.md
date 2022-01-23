@@ -17,3 +17,8 @@ Built with
 -CSS Grid 
 
 -Mobile-first workflow
+
+
+## Live Site
+
+See live preview here:https://jonathancklee1.github.io/testimonial-grid/
